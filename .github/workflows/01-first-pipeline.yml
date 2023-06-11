@@ -1,0 +1,14 @@
+name: 01-first-pipeline
+
+on: workflow_dispatch
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build Code
+      run: |
+        cat /etc/os-release
+        ls -l
+        pwd
