@@ -8,8 +8,10 @@ def pipelineDetails = [
 ]
 
 folder(mainFolderName) {
-  displayName(folderName)
-  folder(folderName) {}
+  displayName(mainFolderName)
+  folder(folderName) {
+    displayName(folderName) 
+  }
 }
 
 for (pipelineDetail in pipelineDetails) {
