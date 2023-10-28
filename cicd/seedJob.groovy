@@ -1,5 +1,4 @@
-def mainFolderName = "manikandan/hello-world"
-// def folderName = "hello-world"
+def folderName = "manikandan/hello-world"
 def pipelineDetails = [
   [name: "01-echo-helloworld", script_path: "cicd/01-Jenkinsfile-helloworld"],
   [name: "02-maven-build", script_path: "cicd/02-Jenkinsfile-maven-build"],
@@ -7,10 +6,10 @@ def pipelineDetails = [
   [name: "04-maven-triggers-hook",script_path: "cicd/04-Jenkinsfile-maven-triggers-hook"]
 ]
 
-folder(mainFolderName) {}
+folder(folderName) {}
 
 for (pipelineDetail in pipelineDetails) {
-  pipelineJob("${mainFolderName}/${pipelineDetail.name}") {
+  pipelineJob("${folderName}/${pipelineDetail.name}") {
     definition {
       cpsScm {
         scm{
